@@ -20,7 +20,7 @@ Try to get as far as possible in the following exercises, increasing in difficul
 7. Apply any type of model and preprocessing steps necessary to achieve the highest possible validation accuracy.
 8. Use the test_brain.csv dataset to predict whether the patients have a brain tumor or not. The target variable has been removed from the dataset.
    Save the prediction results in a list with the same order as the patients in the test dataset.
-   Use the below given code to store the list as .pkl file and save it under the Results section.
+   Use the given code to store the list as .pkl file and save it in the Results folder.
    Finally, do a push request to the github repository. We will calculate your final accuracy score.
 
 """
@@ -95,7 +95,7 @@ Apply any type of model and preprocessing steps necessary to achieve the highest
 Time to predict using your best ML model!
 Use the test_brain.csv dataset to predict whether the patients have a brain tumor or not. The target variable has been removed from the dataset.
 Save the prediction results in a list with the same order as the patients in the test dataset.
-Use the below given code to store the list as .pkl file and save it under the Results section.
+Use the below given code to store the list as .pkl file and save it in the Results folder.
 Finally, do a push request to the github repository. We will calculate your final accuracy score.
 '''
 
