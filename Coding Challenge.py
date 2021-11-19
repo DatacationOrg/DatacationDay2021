@@ -33,7 +33,8 @@ Loading the training set train_brain.csv and split the training set in a trainin
     - scaling the data
 '''
 
-# Read in the dataset: (https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html)
+
+
 
 # Split the training set in a train and validation set, use random_state = 0: (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 
@@ -81,6 +82,7 @@ Visualize the SVM, KNN and RandomForest accuracy results in a heatmap.
 Implement a basic Neural Network and visualize the loss and accuracy, both for the test and training dataset.
 '''
 
+
 # Make use of the MLPClassifier: https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier
 
 
@@ -101,8 +103,8 @@ Finally, do a push request to the github repository. We will calculate your fina
 
 import pickle
 
-group_number = 0
-ypred = []
+group_number = 1
+ypred = pickle.load(open('./Results/Xgb-predictions', 'rb'))
 
 with open(f'Results/test_predictions_group_{group_number}.pkl', 'wb') as f:
     pickle.dump(ypred, f)
