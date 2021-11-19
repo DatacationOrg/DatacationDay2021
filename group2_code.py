@@ -31,12 +31,12 @@ num_data = pd.DataFrame(num_data)
 
 X = pd.concat([cat_data, num_data], axis = 1)
 
-X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size = 0.1, random_state = 0)
+X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size = 0.25, random_state = 7, stratify = y)
 y_train = y_train.values.ravel()
 y_valid = y_valid.values.ravel()
 
 from itertools import product
-from sklearn.metrics import recall_score
+from sklearn.metrics import recall_score, accuracy_score
 from sklearn.svm import SVC
 
 def optimizer(model, parameters):
@@ -46,7 +46,8 @@ def optimizer(model, parameters):
         clf = model(**i).fit(X_train, y_train)  #fitting given model on all parameter combinations
         y_pred = clf.predict(X_valid)
         score = recall_score(y_valid, y_pred)
-        print(score)
+        score1 = accuracy_score(y_valid, y_pred)
+        print(score, score1)
         if score > best_score:  #choosing best parameters
             best_score = score
             best_parameters = i #remambering the index of the best parameters
